@@ -3,16 +3,16 @@ import styled from 'styled-components'
 import TabList from './TabList'
 import Tab from './Tab'
 
-const TabComponent = () => {
-	const Wrapper = styled.div`
-		width: 100%;
-		height: 100vh;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		background-color: #f6f6f6;
-	`
+const TabComponentWrapper = styled.div`
+width: 100%;
+height: 100vh;
+display: flex;
+align-items: center;
+justify-content: center;
+background-color: #f6f6f6;
+`
 
+const TabComponent = () => {
 	const tabData = [
 		{
 			value: '1',
@@ -47,7 +47,7 @@ const TabComponent = () => {
 	}
 
 	return (
-		<Wrapper>
+		<TabComponentWrapper>
 			<TabList
 				defaultValue="1"
 				onChange={value => {
@@ -56,7 +56,7 @@ const TabComponent = () => {
 			>
 				{_renderTabs(tabData)}
 			</TabList>
-		</Wrapper>
+		</TabComponentWrapper>
 	)
 }
 

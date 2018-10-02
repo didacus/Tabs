@@ -8,12 +8,8 @@ const TabListWrapper = styled.ul`
 `
 
 export default class TabList extends Component {
-	constructor(props) {
-		super()
-
-		this.state = {
-			value: props.defaultValue,
-		}
+	state = {
+		value: this.props.defaultValue,
 	}
 
 	select(value) {
